@@ -11,4 +11,4 @@ In the project `Properties` in the `Debugging` tab the `Command` should be the f
 You can `<Browse...>` to it using the dropdown or obtain it from the Task Manager if Excel is running. Under `Processes`
 right click on `EXCEL.EXE` and choose `Open File Location`.  
 To have Excel open your add in when debugging specify `Command Arguments` to be `"$(TargetPath)"`.  
-You may want to also specify `/p $(ProjectDir)` so Excel will default to opening files in your project directory.
+You may want to also specify `/p "$(ProjectDir)"` so Excel will default to opening files in your project directory.
