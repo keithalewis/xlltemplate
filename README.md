@@ -2,7 +2,7 @@
 
 Template for Excel add-ins
 
-Fork or clone the repository. Set the `Configuration` (Debug or Release) and `Platform` (x86 or x64) and build the `template` project.  The platform must be the same as Excel -- x86 for 32-bit or x64 for 64-bit.
+Fork or clone the repository. Set the `Configuration` (Debug or Release) and `Platform` (x86 or x64) and build the `template` project.  The platform must be the same as Excel: x86 for 32-bit or x64 for 64-bit.
 
 ## Debugging
 
