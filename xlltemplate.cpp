@@ -4,6 +4,11 @@
 
 using namespace xll;
 
+AddIn xai_template(
+	Documentation(LR"(
+This object will generate a Sandcastle Helpfile Builder project file.
+)"));
+
 // Information Excel needs to register add-in.
 AddIn xai_function(
 	// Function returning a pointer to an OPER with C name xll_function and Excel name XLL.FUNCTION.
