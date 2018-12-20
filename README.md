@@ -12,6 +12,6 @@ Set breakpoints by clicking on the left boarder at the line you want to stop at,
 ## Documentation
 
 Instanciate a `AddIn xai_`_anyname_`(Documentation(LR("Documentation goes here")));` object to create a 
-[Sandcastle Helpfile Builder](https://github.com/EWSoftware/SHFB) project file in the
+[Sandcastle Help File Builder](https://github.com/EWSoftware/SHFB) project file in the
 Debug folder of your project. Put the `.chm` file it creates in the same location as the `.xll` add-in to
-integrate with Excel's function wizard <ins>Help on this function</ins>.
+integrate with Excel's Insert Function [Help on this function](https://support.office.com/en-us/article/Insert-Function-74474114-7C7F-43F5-BEC3-096C56E2FB13).
