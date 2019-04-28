@@ -14,9 +14,6 @@
     <ClInclude Include="xlltemplate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="xlltemplate.cpp">
@@ -25,11 +22,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="xlltemplate.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="__TemplateIcon.bmp" />
+    <None Include="gitinit.bat" />
   </ItemGroup>
 </Project>
