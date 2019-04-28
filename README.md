@@ -15,3 +15,5 @@ Instantiate a `AddIn xai_anyname(Documentation(LR"(Documentation goes here)"));`
 [Sandcastle Help File Builder](https://github.com/EWSoftware/SHFB) project file (`.shfbproj`) in the
 Debug folder of your project. Put the `.chm` file it creates in the same location as the `.xll` add-in to
 integrate with Excel's Insert Function [Help on this function](https://support.office.com/en-us/article/Insert-Function-74474114-7C7F-43F5-BEC3-096C56E2FB13).
+
+To create project template: Project|Export Template...
