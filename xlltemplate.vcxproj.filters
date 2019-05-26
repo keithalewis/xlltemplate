@@ -23,5 +23,6 @@
   <ItemGroup>
     <None Include="README.md" />
     <None Include="gitinit.bat" />
+    <None Include="NOTES.md" />
   </ItemGroup>
 </Project>
