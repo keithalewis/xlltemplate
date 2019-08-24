@@ -84,10 +84,10 @@ double WINAPI xll_normal_cdf(double x, double mu, double sigma)
 
 AddIn xai_normal_inv(
     Function(XLL_DOUBLE, L"?xll_normal_inv", L"NORMAL.INV")
-    .Arg(XLL_DOUBLE, L"x", L"is the value at which to compute the inverse of the standard normal cumulative density function.")
+    .Number(L"x", L"is the value at which to compute the inverse of the standard normal cumulative distribution function.")
     .Category(CATEGORY)
-    .FunctionHelp(L"Compute the inverse of the standard normal cumulative density function.")
-    .Documentation(L"Compute the inverse of the standard normal cumulative density function.")
+    .FunctionHelp(L"Compute the inverse of the standard normal cumulative distribution function.")
+    .Documentation(L"Compute the inverse of the standard normal cumulative distribution function.")
 );
 double WINAPI xll_normal_inv(double p)
 {
