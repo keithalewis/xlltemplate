@@ -1,12 +1,15 @@
 // xlltemplate.cpp
 #include <cmath>
+#include "fmstemplate.h"
 #include "xlltemplate.h"
 
+using namespace fms;
 using namespace xll;
 
 AddIn xai_template(
 	Documentation(LR"(
-This object will generate a Sandcastle Helpfile Builder project file.
+This object will generate a Sandcastle Helpfile Builder project file
+called <code>
 )"));
 
 // Information Excel needs to register add-in.
@@ -45,4 +48,58 @@ LPOPER WINAPI xll_function(double x)
 	}
 
 	return &result;
+}
+
+AddIn xai_normal_pdf(
+    Function(XLL_DOUBLE, L"?xll_normal_pdf", L"NORMAL.PDF")
+    .Arg(XLL_DOUBLE, L"x", L"is the value at which to compute the normal probability density function.")
+    .Category(CATEGORY)
+    .FunctionHelp(L"Compute the normal probability density function.")
+    .Documentation(L"Compute the normal probability density function.")
+);
+double WINAPI xll_normal_pdf(double x, double mu, double sigma)
+{
+#pragma XLLEXPORT
+    if (sigma == 0)
+        sigma = 1;
+
+    return normal::pdf(x, mu, sigma);
+}
+
+AddIn xai_normal_cdf(
+    Function(XLL_DOUBLE, L"?xll_normal_cdf", L"NORMAL.CDF")
+    .Arg(XLL_DOUBLE, L"x", L"is the value at which to compute the normal cumulative density function.")
+    .Category(CATEGORY)
+    .FunctionHelp(L"Compute the normal cumulative density function.")
+    .Documentation(L"Compute the normal cumulative density function.")
+);
+double WINAPI xll_normal_cdf(double x, double mu, double sigma)
+{
+#pragma XLLEXPORT
+    if (sigma == 0)
+        sigma = 1;
+
+    return normal::cdf(x, mu, sigma);
+}
+
+AddIn xai_normal_inv(
+    Function(XLL_DOUBLE, L"?xll_normal_inv", L"NORMAL.INV")
+    .Arg(XLL_DOUBLE, L"x", L"is the value at which to compute the inverse of the standard normal cumulative density function.")
+    .Category(CATEGORY)
+    .FunctionHelp(L"Compute the inverse of the standard normal cumulative density function.")
+    .Documentation(L"Compute the inverse of the standard normal cumulative density function.")
+);
+double WINAPI xll_normal_inv(double p)
+{
+#pragma XLLEXPORT
+    double x = std::numeric_limits<double>::quiet_NaN();
+
+    try {
+        x = normal::inv(p);
+    }
+    catch (const std::exception& ex) {
+        XLL_ERROR(ex.what());
+    }
+
+    return x;
 }

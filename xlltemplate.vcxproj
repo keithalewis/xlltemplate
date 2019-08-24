@@ -143,6 +143,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="fmstemplate.h" />
     <ClInclude Include="xlltemplate.h" />
   </ItemGroup>
   <ItemGroup>
