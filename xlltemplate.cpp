@@ -9,7 +9,7 @@ using namespace xll;
 AddIn xai_template(
 	Documentation(LR"(
 This object will generate a Sandcastle Helpfile Builder project file
-called <code>
+called <c>sample.shfbproj</c> that can be used to generate documentation.
 )"));
 
 // Information Excel needs to register add-in.
@@ -53,6 +53,8 @@ LPOPER WINAPI xll_function(double x)
 AddIn xai_normal_pdf(
     Function(XLL_DOUBLE, L"?xll_normal_pdf", L"NORMAL.PDF")
     .Arg(XLL_DOUBLE, L"x", L"is the value at which to compute the normal probability density function.")
+    .Arg(XLL_DOUBLE, L"mu", L"is the mean of the normal random variable. Default value is 0.")
+    .Arg(XLL_DOUBLE, L"sigma", L"is the standard deviation of the normal random variable. Default value is 1.")
     .Category(CATEGORY)
     .FunctionHelp(L"Compute the normal probability density function.")
     .Documentation(L"Compute the normal probability density function.")
@@ -69,6 +71,8 @@ double WINAPI xll_normal_pdf(double x, double mu, double sigma)
 AddIn xai_normal_cdf(
     Function(XLL_DOUBLE, L"?xll_normal_cdf", L"NORMAL.CDF")
     .Arg(XLL_DOUBLE, L"x", L"is the value at which to compute the normal cumulative density function.")
+    .Arg(XLL_DOUBLE, L"mu", L"is the mean of the normal random variable. Default value is 0.")
+    .Arg(XLL_DOUBLE, L"sigma", L"is the standard deviation of the normal random variable. Default value is 1.")
     .Category(CATEGORY)
     .FunctionHelp(L"Compute the normal cumulative density function.")
     .Documentation(L"Compute the normal cumulative density function.")
