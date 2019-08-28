@@ -75,7 +75,9 @@ AddIn xai_normal_cdf(
     .Arg(XLL_DOUBLE, L"sigma", L"is the standard deviation of the normal random variable. Default value is 1.")
     .Category(CATEGORY)
     .FunctionHelp(L"Compute the normal cumulative density function.")
-    .Documentation(L"Compute the normal cumulative density function.")
+    .Documentation(
+L"The normal cumulative density function blah, blah, blah..."
+    )
 );
 double WINAPI xll_normal_cdf(double x, double mu, double sigma)
 {
