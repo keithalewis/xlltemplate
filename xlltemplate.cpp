@@ -5,8 +5,11 @@
 using namespace xll;
 
 AddIn xai_template(
-	Documentation(LR"(
+    Document(CATEGORY)
+	.Documentation(LR"(
 This object will generate a Sandcastle Helpfile Builder project file.
+Every <codeInline>AddIn</codeInline> Function with a <codeInline>Documentation</codeInline>
+argument will be added to the documentation.
 )"));
 
 // Information Excel needs to register add-in.
